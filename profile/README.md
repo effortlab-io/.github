@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="../../webapp/public/images/logo-dark.png" alt="Effort Lab Logo" width="200">
+</div>
+
 # Effort Lab
 
 ## Overview
@@ -23,7 +27,7 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 
 ## Repositories
 
-### [API Services](./api)
+### [API Services](../../api)
 **Backend API built with Go**
 - RESTful API with JWT authentication (phone-based)
 - Background job processing with Asynq
@@ -32,7 +36,7 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 - OpenAI integration for AI-powered features
 - Deployed on Fly.io with separate API and worker services
 
-### [Web Application](./webapp)
+### [Web Application](../../webapp)
 **Admin dashboard for trainers**
 - Next.js 15 with App Router
 - TypeScript with strict mode
@@ -41,7 +45,7 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 - Admin-only access control
 - Static site generation for marketing pages
 
-### [Mobile App](./native)
+### [Mobile App](../../native)
 **Cross-platform mobile application**
 - React Native with Expo SDK 53
 - Expo Router for file-based navigation
@@ -88,60 +92,23 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 
 ## Development Setup
 
+For detailed setup instructions, please refer to each repository's README:
+- [API Setup & Development](../../api/README.md#-quick-start)
+- [Web Application Setup](../../webapp/README.md#quick-start)
+- [Mobile App Setup](../../native/README.md#-quick-start)
+
 ### Prerequisites
 - Go 1.23+
 - Node.js 20+
 - PostgreSQL 15+
 - Redis 7+
 
-### API Development
-```bash
-cd api
-cp .env.example .env
-go mod download
-air  # Hot reload development server
-```
-
-### Web Development
-```bash
-cd webapp
-npm install
-npm run dev  # Development server at localhost:3000
-```
-
-### Mobile Development
-```bash
-cd native
-npm install
-npm run start  # Expo development server
-npm run ios    # iOS simulator
-npm run android  # Android emulator
-```
-
 ## Testing
 
-### API
-```bash
-cd api
-./scripts/test-full.sh  # Unit and E2E tests
-./scripts/lint-fast.sh  # Linting
-./scripts/scan.sh       # Security scan
-```
-
-### Web
-```bash
-cd webapp
-npm run lint   # ESLint and Prettier
-npm run check  # TypeScript type checking
-```
-
-### Mobile
-```bash
-cd native
-npm test              # Jest tests
-npm run type-check    # TypeScript checking
-npm run lint          # ESLint and Prettier
-```
+Each repository has its own testing procedures:
+- [API Testing Guide](../../api/README.md#-testing)
+- [Web Application Testing](../../webapp/README.md#available-scripts)
+- [Mobile App Testing](../../native/README.md#-testing)
 
 ## Deployment
 
@@ -150,17 +117,10 @@ npm run lint          # ESLint and Prettier
 - **Staging**: staging.effortlab.io  
 - **Production**: effortlab.io
 
-### API Deployment (Fly.io)
-```bash
-cd api
-# Development
-fly deploy --app effortlab-api-dev --config deployment/development/fly.api.toml
-fly deploy --app effortlab-worker-dev --config deployment/development/fly.worker.toml
-
-# Production
-fly deploy --app effortlab-api-prod --config deployment/production/fly.api.toml
-fly deploy --app effortlab-worker-prod --config deployment/production/fly.worker.toml
-```
+For detailed deployment instructions:
+- [API Deployment (Fly.io)](../../api/README.md#-deployment)
+- [Web Application Deployment](../../webapp/README.md#production-deployment)
+- [Mobile App Deployment](../../native/README.md#-deployment)
 
 ## API Documentation
 
