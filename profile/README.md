@@ -95,9 +95,9 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 ## Development Setup
 
 For detailed setup instructions, please refer to each repository's README:
-- [API Setup & Development](https://github.com/effortlab-io/api#quick-start)
-- [Web Application Setup](https://github.com/effortlab-io/webapp#quick-start)
-- [Mobile App Setup](https://github.com/effortlab-io/native#quick-start)
+- [API Setup & Development](https://github.com/effortlab-io/api?tab=readme-ov-file#-quick-start)
+- [Web Application Setup](https://github.com/effortlab-io/webapp?tab=readme-ov-file#quick-start)
+- [Mobile App Setup](https://github.com/effortlab-io/native?tab=readme-ov-file#-quick-start)
 
 ### Prerequisites
 - Go 1.23+
@@ -108,9 +108,9 @@ For detailed setup instructions, please refer to each repository's README:
 ## Testing
 
 Each repository has its own testing procedures:
-- [API Testing Guide](https://github.com/effortlab-io/api#testing)
-- [Web Application Testing](https://github.com/effortlab-io/webapp#testing)
-- [Mobile App Testing](https://github.com/effortlab-io/native#testing)
+- [API Testing Guide](https://github.com/effortlab-io/api?tab=readme-ov-file#-testing)
+- [Web Application Testing](https://github.com/effortlab-io/webapp?tab=readme-ov-file#available-scripts)
+- [Mobile App Testing](https://github.com/effortlab-io/native?tab=readme-ov-file#-testing)
 
 ## Deployment
 
@@ -120,9 +120,9 @@ Each repository has its own testing procedures:
 - **Production**: effortlab.io
 
 For detailed deployment instructions:
-- [API Deployment (Fly.io)](https://github.com/effortlab-io/api#deployment)
-- [Web Application Deployment](https://github.com/effortlab-io/webapp#deployment)
-- [Mobile App Deployment](https://github.com/effortlab-io/native#deployment)
+- [API Deployment (Fly.io)](https://github.com/effortlab-io/api?tab=readme-ov-file#-deployment)
+- [Web Application Deployment](https://github.com/effortlab-io/webapp?tab=readme-ov-file#production-deployment)
+- [Mobile App Deployment](https://github.com/effortlab-io/native?tab=readme-ov-file#-deployment)
 
 ## API Documentation
 
