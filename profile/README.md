@@ -1,8 +1,6 @@
 <div align="center">
-  <img src="../../webapp/public/images/logo-dark.png" alt="Effort Lab Logo" width="200">
+  <img src="logo-dark.png" alt="Effort Lab" width="300">
 </div>
-
-# Effort Lab
 
 ## Overview
 
