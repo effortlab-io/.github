@@ -68,7 +68,7 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 - JWT authentication
 - Casbin (authorization)
 
-### Frontend
+### Webapp
 - Next.js 15
 - React 19
 - TypeScript 5.3
