@@ -1,8 +1,8 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="logo-white.png">
-    <source media="(prefers-color-scheme: light)" srcset="logo-dark.png">
-    <img src="logo-dark.png" alt="Effort Lab" width="300">
+    <source media="(prefers-color-scheme: dark)" srcset="https://effortlab.io/images/logo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://effortlab.io/images/logo-dark.png">
+    <img src="https://effortlab.io/images/logo-dark.png" alt="Effort Lab" width="300">
   </picture>
 </div>
 
