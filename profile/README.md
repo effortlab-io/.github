@@ -1,110 +1,181 @@
-# Effort Lab 🚀
+# Effort Lab
 
-**Empowering productivity through intelligent automation**
+## Overview
 
----
+Effort Lab is a coaching platform that helps trainers provide structured feedback through effort cards. The platform consists of three main components: a backend API, a web application, and a mobile application.
 
-## 🌟 About Effort Lab
-
-Effort Lab is a modern productivity platform that harnesses the power of AI and cloud-native technologies to streamline workflows and amplify human potential. Built with enterprise-grade infrastructure and cutting-edge development practices, we deliver reliable, scalable solutions that adapt to your needs.
-
-### Our Mission
-To eliminate repetitive tasks and cognitive overhead, allowing teams to focus on what matters most: creative problem-solving and innovation.
-
-## 🏗️ Our Architecture
+## Architecture
 
 ```
 ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│   🌐 Frontend   │  │   📱 Mobile      │  │   🔧 Backend    │
-│   Next.js 14    │  │   React Native  │  │   Go Services   │
-│   TypeScript    │  │   Expo          │  │   PostgreSQL    │
+│   Web App       │  │   Mobile App    │  │   Backend API   │
+│   Next.js 15    │  │   React Native  │  │   Go 1.23       │
+│   TypeScript    │  │   Expo SDK 53   │  │   PostgreSQL    │
 └─────────────────┘  └─────────────────┘  └─────────────────┘
          │                     │                     │
          └─────────────────────┼─────────────────────┘
                                │
                     ┌─────────────────┐
-                    │   ☁️ Cloud      │
-                    │   Google Cloud  │
-                    │   Kubernetes    │
+                    │   Fly.io        │
+                    │   Deployment    │
                     └─────────────────┘
 ```
 
-## 📦 Repositories
+## Repositories
 
-### [🔧 Infrastructure](./infra)
-**Infrastructure as Code for cloud platform**
-- Pulumi-based GCP resource management
-- Multi-environment deployments (dev/staging/prod)
-- Enterprise security with KMS encryption & VPC networking
-- Automated CI/CD with Workload Identity Federation
+### [API Services](./api)
+**Backend API built with Go**
+- RESTful API with JWT authentication (phone-based)
+- Background job processing with Asynq
+- PostgreSQL database with GORM ORM
+- Redis for caching and job queues
+- OpenAI integration for AI-powered features
+- Deployed on Fly.io with separate API and worker services
 
-### [⚡ API Services](../api)
-**Backend powerhouse built with Go**
-- RESTful API with JWT authentication
-- Background workers for async processing
-- Real-time monitoring and observability
-- PostgreSQL + Redis data layer
+### [Web Application](./webapp)
+**Admin dashboard for trainers**
+- Next.js 15 with App Router
+- TypeScript with strict mode
+- Tailwind CSS v4 for styling
+- OAuth authentication (Google/Apple planned)
+- Admin-only access control
+- Static site generation for marketing pages
 
-### [🌐 Web Application](../webapp)
-**Modern frontend experience**
-- Next.js 14 with TypeScript
-- Server-side rendering & static generation
-- Responsive design with Tailwind CSS
-- Google OAuth integration
+### [Mobile App](./native)
+**Cross-platform mobile application**
+- React Native with Expo SDK 53
+- Expo Router for file-based navigation
+- NativeWind for Tailwind CSS styling
+- TypeScript throughout
+- Phone authentication flow
+- Support for iOS and Android
 
-### [📱 Mobile App](../native)
-**Native mobile experience**
-- React Native with Expo
-- Cross-platform iOS & Android
-- Push notifications & real-time sync
+## Tech Stack
 
-## 🛠️ Tech Stack
+### Backend
+- Go 1.23
+- PostgreSQL (primary database)
+- Redis (caching, job queue)
+- Asynq (background jobs)
+- Fiber (HTTP framework)
+- GORM (ORM)
+- JWT authentication
+- Casbin (authorization)
 
-**Frontend & Mobile**
-- Next.js 14, TypeScript, Tailwind CSS
-- React Native, Expo
+### Frontend
+- Next.js 15
+- React 19
+- TypeScript 5.3
+- Tailwind CSS 4
+- Zustand (state management)
+- Axios (API client)
 
-**Backend & Infrastructure**
-- Go (Golang)
-- PostgreSQL, Redis
-- Prometheus & Grafana monitoring
-- Google Cloud Platform
-- Docker, Cloud Run
+### Mobile
+- React Native 0.76
+- Expo SDK 53
+- Expo Router 5
+- NativeWind 4
+- TypeScript
+- React Query (data fetching)
+- Zustand (state management)
 
-**DevOps & Security**
-- Pulumi Infrastructure as Code
-- GitHub Actions CI/CD
-- Workload Identity Federation
-- Automated testing & security scanning
+### Infrastructure
+- Fly.io (hosting)
+- Upstash Redis
+- Tigris (S3-compatible storage)
+- GitHub Actions (CI/CD)
+- Docker (containerization)
 
-## 🌍 Environments
+## Development Setup
 
-- **Production**: [effortlab.io](https://effortlab.io)
-- **Staging**: [staging.effortlab.io](https://staging.effortlab.io)
-- **Development**: [dev.effortlab.io](https://dev.effortlab.io)
+### Prerequisites
+- Go 1.23+
+- Node.js 20+
+- PostgreSQL 15+
+- Redis 7+
 
-## 💡 Key Features
+### API Development
+```bash
+cd api
+cp .env.example .env
+go mod download
+air  # Hot reload development server
+```
 
-- **🤖 AI-Powered Automation**: Smart coaching feedback and workflow optimization
-- **🔒 Enterprise Security**: End-to-end encryption and compliance-ready
-- **⚡ Real-time Collaboration**: Instant updates across all platforms
-- **📊 Analytics & Insights**: Data-driven productivity recommendations
-- **🌐 Global Scale**: Multi-region deployment with 99.9% uptime
+### Web Development
+```bash
+cd webapp
+npm install
+npm run dev  # Development server at localhost:3000
+```
 
-## 🤝 Contributing
+### Mobile Development
+```bash
+cd native
+npm install
+npm run start  # Expo development server
+npm run ios    # iOS simulator
+npm run android  # Android emulator
+```
 
-We welcome contributions! Each repository contains detailed contributing guidelines:
-- Review our [Code of Conduct](CODE_OF_CONDUCT.md)
-- Check out [open issues](https://github.com/search?q=org%3Aeffortlab+is%3Aopen+is%3Aissue) across all repos
-- Submit PRs with comprehensive tests and documentation
+## Testing
 
-## 📞 Connect With Us
+### API
+```bash
+cd api
+./scripts/test-full.sh  # Unit and E2E tests
+./scripts/lint-fast.sh  # Linting
+./scripts/scan.sh       # Security scan
+```
 
-- **Website**: [effortlab.io](https://effortlab.io)
-- **Email**: info@effortlab.io
-- **Twitter**: [@effortlab](https://twitter.com/effortlab_io)
-- **LinkedIn**: [Effort Lab](https://linkedin.com/company/effort-lab)
+### Web
+```bash
+cd webapp
+npm run lint   # ESLint and Prettier
+npm run check  # TypeScript type checking
+```
 
----
+### Mobile
+```bash
+cd native
+npm test              # Jest tests
+npm run type-check    # TypeScript checking
+npm run lint          # ESLint and Prettier
+```
 
-*Built with ❤️ by the Effort Lab team*
+## Deployment
+
+### Environments
+- **Development**: dev.effortlab.io
+- **Staging**: staging.effortlab.io  
+- **Production**: effortlab.io
+
+### API Deployment (Fly.io)
+```bash
+cd api
+# Development
+fly deploy --app effortlab-api-dev --config deployment/development/fly.api.toml
+fly deploy --app effortlab-worker-dev --config deployment/development/fly.worker.toml
+
+# Production
+fly deploy --app effortlab-api-prod --config deployment/production/fly.api.toml
+fly deploy --app effortlab-worker-prod --config deployment/production/fly.worker.toml
+```
+
+## API Documentation
+
+- Swagger UI available at `/swagger/index.html` on each API environment
+- Authentication required in staging/production environments
+- OpenAPI spec at `/docs/swagger.json`
+
+## Contributing
+
+Each repository contains:
+- `CLAUDE.md` - Development guidelines and patterns
+- `.github/` - GitHub Actions workflows
+- Environment-specific configuration files
+
+Submit PRs with:
+- Passing tests
+- Linter compliance
+- Updated documentation where applicable
