@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="logo-dark.png" alt="Effort Lab" width="300">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="logo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="logo-dark.png">
+    <img src="logo-dark.png" alt="Effort Lab" width="300">
+  </picture>
 </div>
 
 ## Overview
