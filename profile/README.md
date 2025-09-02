@@ -29,7 +29,7 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 
 ## Repositories
 
-### [API Services](../../api)
+### [API Services](https://github.com/effortlab-io/api)
 **Backend API built with Go**
 - RESTful API with JWT authentication (phone-based)
 - Background job processing with Asynq
@@ -38,7 +38,7 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 - OpenAI integration for AI-powered features
 - Deployed on Fly.io with separate API and worker services
 
-### [Web Application](../../webapp)
+### [Web Application](https://github.com/effortlab-io/webapp)
 **Admin dashboard for trainers**
 - Next.js 15 with App Router
 - TypeScript with strict mode
@@ -47,7 +47,7 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 - Admin-only access control
 - Static site generation for marketing pages
 
-### [Mobile App](../../native)
+### [Mobile App](https://github.com/effortlab-io/native)
 **Cross-platform mobile application**
 - React Native with Expo SDK 53
 - Expo Router for file-based navigation
@@ -95,9 +95,9 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 ## Development Setup
 
 For detailed setup instructions, please refer to each repository's README:
-- [API Setup & Development](../../api/README.md#-quick-start)
-- [Web Application Setup](../../webapp/README.md#quick-start)
-- [Mobile App Setup](../../native/README.md#-quick-start)
+- [API Setup & Development](https://github.com/effortlab-io/api#quick-start)
+- [Web Application Setup](https://github.com/effortlab-io/webapp#quick-start)
+- [Mobile App Setup](https://github.com/effortlab-io/native#quick-start)
 
 ### Prerequisites
 - Go 1.23+
@@ -108,9 +108,9 @@ For detailed setup instructions, please refer to each repository's README:
 ## Testing
 
 Each repository has its own testing procedures:
-- [API Testing Guide](../../api/README.md#-testing)
-- [Web Application Testing](../../webapp/README.md#available-scripts)
-- [Mobile App Testing](../../native/README.md#-testing)
+- [API Testing Guide](https://github.com/effortlab-io/api#testing)
+- [Web Application Testing](https://github.com/effortlab-io/webapp#testing)
+- [Mobile App Testing](https://github.com/effortlab-io/native#testing)
 
 ## Deployment
 
@@ -120,9 +120,9 @@ Each repository has its own testing procedures:
 - **Production**: effortlab.io
 
 For detailed deployment instructions:
-- [API Deployment (Fly.io)](../../api/README.md#-deployment)
-- [Web Application Deployment](../../webapp/README.md#production-deployment)
-- [Mobile App Deployment](../../native/README.md#-deployment)
+- [API Deployment (Fly.io)](https://github.com/effortlab-io/api#deployment)
+- [Web Application Deployment](https://github.com/effortlab-io/webapp#deployment)
+- [Mobile App Deployment](https://github.com/effortlab-io/native#deployment)
 
 ## API Documentation
 
