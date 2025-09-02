@@ -13,18 +13,23 @@ Effort Lab is a coaching platform that helps trainers provide structured feedbac
 ## Architecture
 
 ```
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│   Web App       │  │   Mobile App    │  │   Backend API   │
-│   Next.js 15    │  │   React Native  │  │   Go 1.23       │
-│   TypeScript    │  │   Expo SDK 53   │  │   PostgreSQL    │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
-         │                     │                     │
-         └─────────────────────┼─────────────────────┘
-                               │
-                    ┌─────────────────┐
-                    │   Fly.io        │
-                    │   Deployment    │
-                    └─────────────────┘
+┌─────────────────┐  ┌─────────────────┐
+│   Web App       │  │   Mobile App    │
+│   Next.js 15    │  │   React Native  │
+│   TypeScript    │  │   Expo SDK 53   │
+└─────────────────┘  └─────────────────┘
+         │                     │
+         └──────────┬──────────┘
+                    │
+         ┌─────────────────┐
+         │   Backend API   │
+         │   Go 1.23       │
+         │   PostgreSQL    │
+         │   Redis         │
+         └─────────────────┘
+                    │
+              Deployed on
+               Fly.io
 ```
 
 ## Repositories
